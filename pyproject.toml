@@ -1,0 +1,30 @@
+[project]
+name = "podcast-transcription-service"
+version = "0.1.0"
+description = "A service to transcribe podcasts with speaker diarisation and event tagging."
+requires-python = ">=3.11"
+dependencies = [
+    # Core dependencies for the MVP
+    "fastapi==0.111.0",
+    "uvicorn[standard]==0.29.0",
+    "openai==1.16.2",
+    "ffmpeg-python==0.2.0",
+    "pydub==0.25.1",
+
+    # Utilities
+    "boto3==1.34.0", # For S3, kept for future use
+    "python-dotenv>=1.0.0"
+]
+
+# Note: The following heavy dependencies were removed to create a minimal MVP
+# due to storage constraints in the execution environment. The modules that
+# use them (diarisation, event_tagging) will remain as stubs.
+# - pyannote.audio
+# - tensorflow
+# - torch
+# - torchaudio
+# - silero
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
