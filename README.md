@@ -1,0 +1,1 @@
+Simple script to transcripe lectures (or anything where people speak, really) that have been downloaded as MP4-files. If necessary, it splits the file into appropriate lengths and stiches the results back together into a single .txt file. Uses OpenAI's speech-to-text functionality. 
